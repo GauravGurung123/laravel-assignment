@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 
-class PermissionSeeder extends Seeder
+class RolePermissionSeeder extends Seeder
 {
     protected $crudList=[
         'view-',
@@ -47,4 +47,5 @@ class PermissionSeeder extends Seeder
            $role = Role::create(['name' => 'editor'])
                 ->givePermissionTo(['view-post', 'edit-post']);
     }
+
 }
